@@ -73,6 +73,37 @@
             margin-bottom: 35px;
             color: #cccccc;
         }
+        
+        /* ========================================= */
+        /* ANIMAÇÃO DE PULSAÇÃO DO BOTÃO             */
+        /* ========================================= */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            }
+            14% {
+                transform: scale(1.08);
+                box-shadow: 0 0 35px rgba(40, 167, 69, 0.9);
+            }
+            28% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            }
+            42% {
+                transform: scale(1.08);
+                box-shadow: 0 0 35px rgba(40, 167, 69, 0.9);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            }
+        }
+
         .download-btn {
             display: inline-block;
             padding: 20px 40px;
@@ -82,16 +113,20 @@
             background-color: #28a745;
             text-decoration: none;
             border-radius: 12px;
-            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
             width: 80%;
             max-width: 300px;
+            
+            /* Aplica a animação continuamente */
+            animation: heartbeat 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: background-color 0.2s; /* Mantém a transição suave para o hover */
         }
+        
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(40, 167, 69, 0.8);
             background-color: #34ce57;
+            /* No hover a animação continua rodando, só muda a cor */
         }
+        /* ========================================= */
+
         .info-android {
             margin-top: 20px;
             font-size: 0.9rem;
