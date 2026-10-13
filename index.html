@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Super Slot - Caça-níquel Holográfico</title>
+
+    <!-- Meta Tags para Compartilhamento -->
+    <meta property="og:title" id="og-title" content="Super Slot - Ganhe $10.000 Dólares!">
+    <meta property="og:description" id="og-desc" content="Baixe o melhor caça-níquel holográfico para Android e tente a sorte.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-702Q7N6K9F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-702Q7N6K9F');
+    </script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            background: #141414;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(40, 167, 69, 0.15);
+            border: 1px solid #222;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            margin-top: 0;
+            color: #28a745; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .prize-text {
+            font-size: 1.6rem;
+            color: #ffd700; 
+            font-weight: bold;
+            margin: 20px 0;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            color: #cccccc;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #000;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            width: 80%;
+            max-width: 300px;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(40, 167, 69, 0.8);
+            background-color: #34ce57;
+        }
+        .info-android {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="title-text">Super Slot</h1>
+        <div class="subtitle" id="subtitle-text">O primeiro Caça-Níquel holográfico do mundo!!!</div>
+        
+        <div class="prize-text" id="prize-text">🏆 Prêmio máximo: $10.000 Dólares!!! 🏆</div>
+        
+        <p id="desc-text">
+            O melhor caça-níquel virtual holográfico para Android.<br><br>
+            Acerte as 3 figuras iguais e fature a bolada direto na sua conta. Jogue no seu próprio ambiente onde estiver!
+        </p>
+        
+        <a href="#" id="btn-baixar" class="download-btn">BAIXAR APK AGORA</a>
+        
+        <div class="info-android" id="info-text">Requer Android 8.0 ou superior</div>
+    </div>
+
+    <script>
+        // ==========================================================
+        // 1. LÓGICA DO LINK DE DOWNLOAD (Google Drive Intent)
+        // ==========================================================
+        var linkDriveWeb = "https://drive.google.com/file/d/1WwOMYMKeSP29Wny_Tb5IqNZvqXidPXxi/";
+        var linkDriveApp = "intent://drive.google.com/file/d/1WwOMYMKeSP29Wny_Tb5IqNZvqXidPXxi/#Intent;scheme=https;package=com.google.android.apps.docs;action=android.intent.action.VIEW;S.browser_fallback_url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1K2qvB4arE2931tNb7JrT9h6aSvdr_Vd_%2Fview;end";
+        
+        var isAndroid = /android/i.test(navigator.userAgent || navigator.vendor || window.opera);
+        var linkFinal = isAndroid ? linkDriveApp : linkDriveWeb;
+        document.getElementById("btn-baixar").href = linkFinal;
+
+        // ==========================================================
+        // 2. SISTEMA DE TRADUÇÃO AUTOMÁTICA
+        // ==========================================================
+        var userLang = navigator.language || navigator.userLanguage || "pt";
+        var isPortuguese = userLang.toLowerCase().indexOf("pt") === 0;
+
+        if (!isPortuguese) {
+            // Traduz a tag principal
+            document.getElementById("html-tag").lang = "en";
+            
+            // Traduz Metadados
+            var enTitle = "Super Slot - Win $10,000 Dollars!!!";
+            var enDesc = "Download the best holographic slot machine for Android and try your luck.";
+            document.getElementById("page-title").innerText = enTitle;
+            document.getElementById("og-title").content = enTitle;
+            document.getElementById("og-desc").content = enDesc;
+
+            // Traduz Interface Visual
+            document.getElementById("subtitle-text").innerText = "Augmented Reality";
+            document.getElementById("prize-text").innerText = "🏆 Grand Prize: $10,000 Dollars!!! 🏆";
+            document.getElementById("desc-text").innerHTML = "The best virtual holographic slot machine for Android.<br><br>Match all 3 identical figures and win the jackpot straight to your account. Play in your own environment anywhere!!!";
+            document.getElementById("btn-baixar").innerText = "DOWNLOAD APK NOW";
+            document.getElementById("info-text").innerText = "Requires Android 8.0 or higher";
+        }
+    </script>
+</body>
+</html>
